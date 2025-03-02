@@ -123,7 +123,7 @@ CREATE TABLE customer_data (
     price TEXT,
     timestamp TEXT
 );
-
+```
 
 
 **Key Improvements:**
@@ -139,3 +139,24 @@ CREATE TABLE customer_data (
 
 This revised version should be a good starting point for your repository's `README.md` file. Customize the bracketed placeholders and adapt the content to accurately reflect your project's details and features. Remember to create a `LICENSE` file as well.
 
+
+How to Create and Use requirements.txt:
+
+Ensure you're in your virtual environment: Activate your virtual environment before installing or freezing dependencies.
+
+```source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate  # Windows
+```
+Install the packages (if you haven't already): If you don't have those libraries already:
+```pip install Flask reportlab chardet gunicorn
+```
+Generate the requirements.txt file: This is the best way to ensure you capture all the dependencies (including transitive ones).
+```pip freeze > requirements.txt
+```
+This command creates a file named requirements.txt in your current directory, listing all the packages and their versions that are installed in your virtual environment.
+
+Using the requirements.txt file to install dependencies: If someone wants to install all the dependencies listed in your requirements.txt file, they can run:
+
+```
+pip install -r requirements.txt
+```
